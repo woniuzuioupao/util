@@ -7,7 +7,6 @@ import java.util.Map;
 
 /**
  * 身份证校验工具类
- * Created by Gongxl on 2017/4/18.
  */
 public class IdCardUtil {
     final static Map<Integer, String> zoneNum = new HashMap<Integer, String>();

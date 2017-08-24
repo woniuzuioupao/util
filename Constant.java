@@ -8,9 +8,8 @@ import java.util.Date;
 
 /**
  * 类描述：
- *
- * @author by zhanggl on 2017/2/15.
  */
+
 public class Constant implements Serializable {
 
     private static final long serialVersionUID = -8606391175041072035L;

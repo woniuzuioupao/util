@@ -5,7 +5,6 @@ import java.io.Serializable;
 /**
  * 类描述：
  *
- * @author by zhanggl on 2016/12/1.
  */
 public class Point implements Serializable {
     private static final long serialVersionUID = -4333831679948500401L;

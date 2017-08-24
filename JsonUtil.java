@@ -9,7 +9,6 @@ import java.io.Serializable;
 /**
  * 类描述：
  *
- * @author by zhanggl on 2016/10/17.
  */
 public class JsonUtil implements Serializable {
 

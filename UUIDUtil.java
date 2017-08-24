@@ -6,7 +6,6 @@ import java.util.UUID;
 /**
  * 类描述：
  *
- * @author by zhanggl on 2016/10/13.
  */
 public class UUIDUtil implements Serializable {
 

@@ -6,7 +6,6 @@ import java.util.List;
 /**
  * 类描述：
  *
- * @author by zhanggl on 2016/12/1.
  */
 public class MathUtil implements Serializable {
 
