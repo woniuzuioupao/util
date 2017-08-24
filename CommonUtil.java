@@ -26,12 +26,7 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * 工具类
- *
- * @author zhanggl
- * @version 1.0 2011-12-19
- */
+
 public class CommonUtil {
     private static final Logger logger = LoggerFactory.getLogger(CommonUtil.class);
 
