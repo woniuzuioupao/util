@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>特殊字符普通字符（正则表达式） - bokeyuanjp - 博客园</title>
+<link type="text/css" rel="stylesheet" href="%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%20-%20bokeyuanjp%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%20-%20bokeyuanjp%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/bundle-StylePink.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%20-%20bokeyuanjp%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/bundle-StylePink-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/bkyj/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/bkyj/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/bkyj/wlwmanifest.xml">
+<script src="%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%20-%20bokeyuanjp%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'bkyj', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%20-%20bokeyuanjp%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/blog-common.js" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="banner">
+<!--done-->
+<div class="header">
+	<div class="headerText">
+		<a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/bkyj/">bokeyuanjp</a><br>
+		<div class="headerDis"></div>
+	</div>
+</div>
+</div>
+<div id="main">
+	<!-- right starts -->
+	<div id="right">
+		<div id="right_content">
+			<div id="mystats">
+				
+					<div id="blog_stats">
+<!--done-->
+<div class="blogStats">
+随笔- 18&nbsp;
+文章- 17&nbsp;
+评论- 0&nbsp;
+
+</div></div>
+				
+			</div>
+			<div id="mylinks">
+<!--done-->
+<a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a>&nbsp;&nbsp;<a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/bkyj/">首页</a>&nbsp;&nbsp;<a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a>&nbsp;&nbsp;<a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/bokeyuanjp">联系</a>&nbsp;&nbsp;<a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a>&nbsp;&nbsp;<a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/bkyj/rss">订阅</a>&nbsp;<a id="blog_nav_rss_image" href="http://www.cnblogs.com/bkyj/rss"><img src="%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%20-%20bokeyuanjp%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/xml.gif" alt="订阅"></a></div>
+			<div id="topics">
+				
+<div id="post_detail">
+<!--done-->
+<div class="post">
+	<div class="postTitle">
+		<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/bkyj/p/6538349.html">特殊字符普通字符（正则表达式）</a>
+	</div>
+	<div id="cnblogs_post_body"><h2>电话号码，邮箱正则表达式</h2>
+<ol>
+<li>手机：/^0?1[3|4|5|8][0-9]\d{8}$/</li>
+<li>固话：/^0[\d]{2,3}-[\d]{7,8}$/</li>
+<li>电子邮箱：/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/<br>/^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/</li>
+<li>用户名：/^[a-z0-9_-]{3,16}$/</li>
+<li>密码：/^[a-z0-9_-]{6,18}$/</li>
+<li>URL：/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/</li>
+</ol>
+<h2>普通字符&nbsp; &nbsp; &nbsp; &nbsp; 描述</h2>
+<p>\&nbsp; &nbsp; &nbsp; &nbsp; 将下一个字符标记为一个特殊字符、或一个原义字符、或一个 
+后向引用、或一个八进制转义符。例如，’n’ 匹配字符 “n”。’\n’ 匹配一个换行符。序列 ‘\\’ 匹配 “\” 而 “\(” 则匹配 
+“(”。<br>.&nbsp; &nbsp; &nbsp; &nbsp; 匹配除 “\n” 之外的任何单个字符。要匹配包括 ‘\n’ 在内的任何字符，请使用象 ‘[.\n]‘ 的模式。<br>x|y&nbsp; &nbsp; &nbsp; &nbsp; 匹配 x 或 y。例如，’z|food’ 能匹配 “z” 或 “food”。’(z|f)ood’ 则匹配 “zood” 或 “food”。<br>[xyz]&nbsp; &nbsp; &nbsp; &nbsp; 字符集合。匹配所包含的任意一个字符。例如， ‘[abc]‘ 可以匹配 “plain” 中的 ‘a’。<br>[^xyz]&nbsp; &nbsp; &nbsp; &nbsp; 负值字符集合。匹配未包含的任意字符。例如， ‘[^abc]‘ 可以匹配 “plain” 中的’p'。<br>[a-z]&nbsp; &nbsp; &nbsp; &nbsp; 字符范围。匹配指定范围内的任意字符。例如，’[a-z]‘ 可以匹配 ‘a’ 到 ‘z’ 范围内的任意小写字母字符。<br>[^a-z]&nbsp; &nbsp; &nbsp; &nbsp; 负值字符范围。匹配任何不在指定范围内的任意字符。例如，’[^a-z]‘ 可以匹配任何不在 ‘a’ 到 ‘z’ 范围内的任意字符。<br>\cx&nbsp; &nbsp; &nbsp; &nbsp; 匹配由x指明的控制字符。例如， \cM 匹配一个 Control-M 或回车符。 x 的值必须为 A-Z 或 a-z 之一。否则，将 c 视为一个原义的 ‘c’ 字符。<br>\d&nbsp; &nbsp; &nbsp; &nbsp; 匹配一个数字字符。等价于 [0-9]。<br>\D&nbsp; &nbsp; &nbsp; &nbsp; 匹配一个非数字字符。等价于 [^0-9]。<br>\w&nbsp; &nbsp; &nbsp; &nbsp; 匹配包括下划线的任何单词字符。等价于’[A-Za-z0-9_]‘。<br>\W&nbsp; &nbsp; &nbsp; &nbsp; 匹配任何非单词字符。等价于 ‘[^A-Za-z0-9_]‘。<br>\xn&nbsp;
+ &nbsp; &nbsp; &nbsp; 匹配 n，其中 n 为十六进制转义值。十六进制转义值必须为确定的两个数字长。例如， ‘\x41′ 
+匹配 “A”。’\x041′ 则等价于 ‘\x04′ &amp; “1″。正则表达式中可以使用 ASCII 编码。.<br>\num&nbsp; &nbsp; &nbsp; &nbsp; 匹配 num，其中 num 是一个正整数。对所获取的匹配的引用。例如，’(.)\1′ 匹配两个连续的相同字符。<br>\n&nbsp; &nbsp; &nbsp; &nbsp; 标识一个八进制转义值或一个后向引用。如果 \n 之前至少 n 个获取的子表达式，则 n 为后向引用。否则，如果 n 为八进制数字 (0-7)，则n 为一个八进制转义值。<br>\nm&nbsp;
+ &nbsp; &nbsp; &nbsp; 标识一个八进制转义值或一个后向引用。如果 \nm 之前至少有is preceded by at 
+least nm 个获取得子表达式，则 nm 为后向引用。如果 \nm 之前至少有 n 个获取，则 n 为一个后跟文字 m 
+的后向引用。如果前面的条件都不满足，若? n 和 m 均为八进制数字 (0-7)，则 \nm将匹配八进制转义值 nm。<br>\nml&nbsp; &nbsp; &nbsp; &nbsp; 如果 n 为八进制数字 (0-3)，且 m 和 l 均为八进制数字 (0-7)，则匹配八进制转义值 nml。<br>\un&nbsp; &nbsp; &nbsp; &nbsp; 匹配 n，其中 n 是一个用四个十六进制数字表示的 Unicode 字符。例如， \u00A9 匹配版权符号 (?)。</p>
+<h2><br>特殊字符&nbsp; &nbsp; &nbsp; &nbsp; 说明</h2>
+<p>$&nbsp; &nbsp; &nbsp; &nbsp; 匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 ‘\n’ 或 ‘\r’。要匹配 $ 字符本身，请使用 \$。<br>( )&nbsp; &nbsp; &nbsp; &nbsp; 标记一个子表达式的开始和结束位置。子表达式可以获取供以后使用。要匹配这些字符，请使用 \( 和 \)。<br>*&nbsp; &nbsp; &nbsp; &nbsp; 匹配前面的子表达式零次或多次。要匹配 * 字符，请使用 \*。<br>+&nbsp; &nbsp; &nbsp; &nbsp; 匹配前面的子表达式一次或多次。要匹配 + 字符，请使用 +。<br>.&nbsp; &nbsp; &nbsp; &nbsp; 匹配除换行符 \n之外的任何单字符。要匹配 .，请使用 \。<br>[&nbsp; &nbsp; &nbsp; &nbsp; 标记一个中括号表达式的开始。要匹配 [，请使用 \[。<br>?&nbsp; &nbsp; &nbsp; &nbsp; 匹配前面的子表达式零次或一次，或指明一个非贪婪限定符。要匹配 ? 字符，请使用 \?。<br>\&nbsp; &nbsp; &nbsp; &nbsp; 将下一个字符标记为或特殊字符、或原义字符、或后向引用、或八进制转义符。例如， 'n' 匹配字符 'n'。'\n' 匹配换行符。序列 '\' 匹配 "\"，而 '\(' 则匹配 "("。<br>^&nbsp; &nbsp; &nbsp; &nbsp; 匹配输入字符串的开始位置，除非在方括号表达式中使用，此时它表示不接受该字符集合。要匹配 ^ 字符本身，请使用\^。<br>{&nbsp; &nbsp; &nbsp; &nbsp; 标记限定符表达式的开始。要匹配 {，请使用 \{。<br>|&nbsp; &nbsp; &nbsp; &nbsp; 指明两项之间的一个选择。要匹配 |，请使用 \|。</p>
+<p>&nbsp;</p>
+<h2>非打印字符&nbsp; &nbsp; &nbsp; &nbsp; 含义</h2>
+<p><br>\cx&nbsp; &nbsp; &nbsp; &nbsp; 匹配由x指明的控制字符。例如， \cM 匹配一个 Control-M 或回车符。 x 的值必须为 A-Z 或 a-z 之一。否则，将 c 视为一个原义的 'c' 字符。<br>\f&nbsp; &nbsp; &nbsp; &nbsp; 匹配一个换页符。等价于 \x0c 和 \cL。<br>n&nbsp; &nbsp; &nbsp; &nbsp; 匹配一个换行符。等价于 x0a 和 cJ。<br>r&nbsp; &nbsp; &nbsp; &nbsp; 匹配一个回车符。等价于 x0d 和 cM。<br>\s&nbsp; &nbsp; &nbsp; &nbsp; 匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [?\f\n\r\t\v]。<br>\S&nbsp; &nbsp; &nbsp; &nbsp; 匹配任何非空白字符。等价于 [^?\f\n\r\t\v]。<br>\t&nbsp; &nbsp; &nbsp; &nbsp; 匹配一个制表符。等价于 \x09 和 \cI。<br>\v&nbsp; &nbsp; &nbsp; &nbsp; 匹配一个垂直制表符。等价于 \x0b 和 \cK。<br><br><br>限定符&nbsp; &nbsp; &nbsp; &nbsp; 描述<br>*&nbsp; &nbsp; &nbsp; &nbsp; 匹配前面的子表达式零次或多次。例如，zo* 能匹配 “z” 以及 “zoo”。 * 等价于{0,}。<br>+&nbsp; &nbsp; &nbsp; &nbsp; 匹配前面的子表达式一次或多次。例如，’zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。+ 等价于 {1,}。<br>?&nbsp; &nbsp; &nbsp; &nbsp; 匹配前面的子表达式零次或一次。例如，”do(es)?” 可以匹配 “do” 或 “does” 中的”do” 。? 等价于 {0,1}。<br>{n}&nbsp; &nbsp; &nbsp; &nbsp; n 是一个非负整数。匹配确定的 n 次。例如，’o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。<br>{n,}&nbsp;
+ &nbsp; &nbsp; &nbsp; n 是一个非负整数。至少匹配n 次。例如，’o{2,}’ 不能匹配 “Bob” 中的 
+‘o’，但能匹配 “foooood” 中的所有 o。’o{1,}’ 等价于 ‘o+’。’o{0,}’ 则等价于 ‘o*’。<br>{n,m}&nbsp;
+ &nbsp; &nbsp; &nbsp; m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次。刘， 
+“o{1,3}” 将匹配 “fooooood” 中的前三个 o。’o{0,1}’ 等价于 ‘o?’。请注意在逗号和两个数之间不能有空格。<br><br></p>
+<h2>定位符&nbsp; &nbsp; &nbsp; &nbsp; 描述</h2>
+<p>^&nbsp; &nbsp; &nbsp; &nbsp; 匹配输入字符串的开始位置。如果设置了 RegExp 对象的 Multiline 属性，^ 也匹配 ‘\n’ 或 ‘\r’ 之后的位置。<br>$&nbsp; &nbsp; &nbsp; &nbsp; 匹配输入字符串的结束位置。如果设置了RegExp 对象的 Multiline 属性，$ 也匹配 ‘\n’ 或 ‘\r’ 之前的位置。<br>\b&nbsp; &nbsp; &nbsp; &nbsp; 匹配一个单词边界，也就是指单词和空格间的位置。<br>\B&nbsp; &nbsp; &nbsp; &nbsp; 匹配非单词边界。</p>
+<h2>是否有匹配</h2>
+<p>regexpObject.test(string)<br>返回值为Boolean型<br><br>var re = new RegExp(/\bbe\b/g);<br>var str = "To be, or not to be:That is the question:";<br>alert(str.search(re));<br>string.search(regexpObject)<br>返回匹配字符的位置，无匹配返回-1<br><br>var re = new RegExp(/\bbe\b/g);<br>var str = "To be, or not to be:That is the question:";<br>alert(re.test(str));<br>取得正则匹配信息<br><br>regexpObject.exec(string)<br>var re = new RegExp(/be/g);<br>var str = "To be, or not to be:That is the question:";<br>var f;<br>do<br>{<br>&nbsp; &nbsp; f = re.exec(str);<br>&nbsp; &nbsp; alert(f + ":" + f.index);<br>} while (f!=null);<br>使用正则表达式进行字符串替换<br><br>string.replace(re, replaceString)<br>var re = new RegExp(/be/g);<br>var str = "To be, or not to be:That is the question:";<br>alert(str.replace(re, "*"));</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/bkyj/category/948321.html" target="_blank">h5</a></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(6538349,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow('05d7a7e7-d208-e511-b908-9dcfd8948a71');" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%20-%20bokeyuanjp%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%20-%20bokeyuanjp%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/bkyj/" target="_blank"><img src="%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%20-%20bokeyuanjp%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/sample_face.gif" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/bkyj/">bokeyuanjp</a><br>
+            <a href="http://home.cnblogs.com/u/bkyj/followees">关注 - 8</a><br>
+            <a href="http://home.cnblogs.com/u/bkyj/followers">粉丝 - 0</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow('05d7a7e7-d208-e511-b908-9dcfd8948a71');return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(6538349,'Digg')">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(6538349,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/bkyj/p/6515146.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/bkyj/p/6515146.html" title="发布于2017-03-07 15:49">点击事件</a><br><a href="http://www.cnblogs.com/bkyj/p/6601306.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/bkyj/p/6601306.html" title="发布于2017-03-22 18:06">砸蛋游戏</a><br></div>
+</div>
+
+
+	<div class="postDesc">posted on <span id="post-date">2017-03-12 16:44</span> <a href="http://www.cnblogs.com/bkyj/">bokeyuanjp</a> 阅读(<span id="post_view_count">2408</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6538349" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(6538349);return false;">收藏</a></div>
+</div>
+<script type="text/javascript">var allowComments=true,cb_blogId=230148,cb_entryId=6538349,cb_blogApp=currentBlogApp,cb_blogUserGuid='05d7a7e7-d208-e511-b908-9dcfd8948a71',cb_entryCreatedDate='2017/3/12 16:44:00';loadViewCount(cb_entryId);</script>
+
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login('commentform');">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://dnspod.cloud.tencent.com/act/seckill?fromSource=gwzcw.410370.410370.410370" target="_blank">【推荐】腾讯云域名+云解析 限时折扣抓紧抢购</a><br><a href="http://www.gcpowertools.com.cn/products/spreadjs/?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=SpreadJS&amp;utm_campaign=community" target="_blank">【推荐】可嵌入您系统的“在线Excel”！SpreadJS 纯前端表格控件</a><br><a href="http://click.aliyun.com/m/18488/" target="_blank">【推荐】阿里云“全民云计算”优惠升级</a><br></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"><a href="http://click.aliyun.com/m/26126/" target="_blank"><img src="%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%20-%20bokeyuanjp%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/24442-20170830182528765-2055545967.png" alt="阿里云0830" width="300" height="250"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/577584/" target="_blank">微软变形传感器专利曝光，或用于HoloLens及穿戴设备</a><br> ·  <a href="http://news.cnblogs.com/n/577583/" target="_blank">Lily无人机东山再起，但泯然于众矣</a><br> ·  <a href="http://news.cnblogs.com/n/577582/" target="_blank">本土创业“出海”难？这家公司拿下了北美70%的市场份额</a><br> ·  <a href="http://news.cnblogs.com/n/577581/" target="_blank">《愤怒的小鸟》开发商Rovio将宣布上市计划：估值可达20亿美元</a><br> ·  <a href="http://news.cnblogs.com/n/577579/" target="_blank">《王者荣耀》上线“隐身”功能：再不怕游戏中遇到老板</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"><a href="https://www.jiguang.cn/devservice?source=bky&amp;hmsr=%E5%8D%9A%E5%AE%A2%E5%9B%AD&amp;hmpl=&amp;hmcu=&amp;hmkw=&amp;hmci=" target="_blank"><img src="%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%20-%20bokeyuanjp%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/24442-20170901112708499-388259391.gif" alt="极光0901" width="468" height="60"></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/575829/" target="_blank">做到这一点，你也可以成为优秀的程序员</a><br> ·  <a href="http://kb.cnblogs.com/page/566880/" target="_blank">写给立志做码农的大学生</a><br> ·  <a href="http://kb.cnblogs.com/page/569057/" target="_blank">架构腐化之谜</a><br> ·  <a href="http://kb.cnblogs.com/page/572854/" target="_blank">学会思考，而不只是编程</a><br> ·  <a href="http://kb.cnblogs.com/page/574767/" target="_blank">编写Shell脚本的最佳实践</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+			</div>
+		</div>
+	</div>
+	<!-- right ends -->
+	<!-- left starts -->
+	<div id="left">
+		<!-- 左侧工具部分 -->
+		<div id="left_content">
+			<div id="calendar"><div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" title="Calendar" cellspacing="0" cellpadding="0">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar('2017/08/01');return false;">&lt;</a></td><td align="center">2017年9月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar('2017/10/01');return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" abbr="日" scope="col" align="center">日</th><th class="CalDayHeader" abbr="一" scope="col" align="center">一</th><th class="CalDayHeader" abbr="二" scope="col" align="center">二</th><th class="CalDayHeader" abbr="三" scope="col" align="center">三</th><th class="CalDayHeader" abbr="四" scope="col" align="center">四</th><th class="CalDayHeader" abbr="五" scope="col" align="center">五</th><th class="CalDayHeader" abbr="六" scope="col" align="center">六</th></tr><tr><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td class="CalWeekendDay" align="center">2</td></tr><tr><td class="CalWeekendDay" align="center">3</td><td align="center">4</td><td class="CalTodayDay" align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td class="CalWeekendDay" align="center">9</td></tr><tr><td class="CalWeekendDay" align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td class="CalWeekendDay" align="center">16</td></tr><tr><td class="CalWeekendDay" align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td class="CalWeekendDay" align="center">23</td></tr><tr><td class="CalWeekendDay" align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td><td class="CalWeekendDay" align="center">30</td></tr><tr><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+<!--done-->
+<!-- <h1 class="listtitle">公告</h1> -->
+<div class="newsItem">
+	<div id="blog-news"><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/bkyj/">bokeyuanjp</a><br>园龄：<a href="http://home.cnblogs.com/u/bkyj/" title="入园时间：2015-06-02">2年3个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/bkyj/followers/">0</a><br>关注：<a href="http://home.cnblogs.com/u/bkyj/followees/">8</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow('05d7a7e7-d208-e511-b908-9dcfd8948a71')">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			
+				<div id="leftcontentcontainer">
+					<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk" type="text">&nbsp;<input onclick="zzk_go()" value="找找看" id="btnZzk" class="btn_my_zzk" type="button"></div>
+<div id="widget_my_google" class="div_my_zzk"><input name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk" type="text">&nbsp;<input onclick="google_go()" value="谷歌搜索" class="btn_my_zzk" type="button"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/bkyj/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/bkyj/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/bkyj/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/bkyj/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/bkyj/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+
+</div></div><div id="sidebar_toptags" class="sidebar-block"></div><div id="sidebar_categories">
+<!--done-->
+
+		<h1 class="catListTitle">随笔分类</h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="CatList_LinkList_0_Link_0" class="listitem" href="http://www.cnblogs.com/bkyj/category/948321.html">h5(12)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_0_Link_1" class="listitem" href="http://www.cnblogs.com/bkyj/category/949460.html">javascript(4)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_0_Link_2" class="listitem" href="http://www.cnblogs.com/bkyj/category/884979.html">英语公开课随记</a></li>
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">随笔档案</h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="CatList_LinkList_1_Link_0" class="listitem" href="http://www.cnblogs.com/bkyj/archive/2017/04.html">2017年4月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_1_Link_1" class="listitem" href="http://www.cnblogs.com/bkyj/archive/2017/03.html">2017年3月 (5)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_1_Link_2" class="listitem" href="http://www.cnblogs.com/bkyj/archive/2017/02.html">2017年2月 (11)</a></li>
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">文章分类</h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="CatList_LinkList_2_Link_0" class="listitem" href="http://www.cnblogs.com/bkyj/category/878085.html">as3学习(5)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_2_Link_1" class="listitem" href="http://www.cnblogs.com/bkyj/category/911592.html">h5(8)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_2_Link_2" class="listitem" href="http://www.cnblogs.com/bkyj/category/1069678.html">数据库(1)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_2_Link_3" class="listitem" href="http://www.cnblogs.com/bkyj/category/884981.html">英语公开课随记(1)</a></li>
+			
+				</ul>
+			
+	
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap" style="display: none;">
+<h3 class="catListTitle">最新评论</h3>
+<div class="RecentComment" id="RecentComments">
+	<div id="RecentCommentsBlock"></div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<h3 class="catListTitle">阅读排行榜</h3>
+<div class="RecentComment" id="TopViewPosts"> 
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/bkyj/p/6538349.html">1. 特殊字符普通字符（正则表达式）(2408)</a></li><li><a href="http://www.cnblogs.com/bkyj/p/6656979.html">2. 修改input框默认显示的字体颜色(1615)</a></li><li><a href="http://www.cnblogs.com/bkyj/p/6439263.html">3. Jquery,appendchild和append(719)</a></li><li><a href="http://www.cnblogs.com/bkyj/p/6421800.html">4. 图片轮播(104)</a></li><li><a href="http://www.cnblogs.com/bkyj/p/6480158.html">5. 添加或移除样式(96)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap" style="display: none;">
+<h3 class="catListTitle">评论排行榜</h3>
+<div class="RecentComment" id="TopCommentsPosts">
+	<div id="TopFeedbackPostsBlock"></div>
+</div></div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap" style="display: none;">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div class="RecentComment">
+	<div id="TopDiggPostsBlock"></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+				</div>
+			
+		</div>
+		<!-- //右侧工具部分 -->
+	</div>
+	<!-- left ends -->	
+	<div class="clear"></div>
+</div>
+<div id="footer">
+	
+<!--done-->
+Copyright ©2017 bokeyuanjp
+</div>
+
+
+
+</body></html>
