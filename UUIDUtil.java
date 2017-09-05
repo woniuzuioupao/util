@@ -11,6 +11,6 @@ public class UUIDUtil implements Serializable {
 
     public static String generateUUID() {
         return UUID.randomUUID().toString().replaceAll("-", "");
-    }
+    }   
 
 }

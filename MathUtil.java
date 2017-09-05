@@ -46,4 +46,17 @@ public class MathUtil implements Serializable {
         return (nCross % 2 == 1);
     }
 
+    
+    /**
+     * 保留两位小数
+     * 
+     */
+    public void  m1(){
+         DecimalFormat f = new DecimalFormat("#.00");
+         double s=3.6565;
+         String c=f.format(s);
+         System.out.print(c);//out:3.66
+
+    }   
+
 }
