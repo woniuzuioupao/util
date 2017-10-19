@@ -4,7 +4,7 @@
 drop table a;
 create table a (x varchar(10),y varchar(10));
 insert into a values('yujx','all'),('oracle','pc'),('mysql','mobile');
-#表a的测试数据如下
+表a的测试数据如下
 MySQL>select * from a;
 +--------+--------+
 | x      | y      |
@@ -14,7 +14,7 @@ MySQL>select * from a;
 | mysql  | mobile |
 +--------+--------+
 3 rows in set (0.00 sec)
-#默认的按y排序（升序或降序）结果
+默认的按y排序（升序或降序）结果
 MySQL>select * from a order by y;
 +--------+--------+
 | x      | y      |
@@ -48,7 +48,7 @@ MySQL>select * from a order by find_in_set(y,'mobile,all,pc');
 3 rows in set (0.00 sec)  
 
 方法二：使用FIELD(str,str1,str2,str3,...)函数 
-#FIELD函数主要用途会返回值在后面列表中的位置，如下
+FIELD函数主要用途会返回值在后面列表中的位置，如下
 MySQL>select x,y,field(y,'mobile','pc','all') sort_Nu from a order by field(y,'mobile','pc','all');    
 +--------+--------+---------+
 | x      | y      | sort_Nu |
