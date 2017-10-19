@@ -1,10 +1,10 @@
-×Ö¶Î°´ÕÕÖ¸¶¨Ë³ÐòÅÅÐò
+ï»¿å­—æ®µæŒ‰ç…§æŒ‡å®šé¡ºåºæŽ’åº
 
-²âÊÔÊý¾Ý
+æµ‹è¯•æ•°æ®
 drop table a;
 create table a (x varchar(10),y varchar(10));
 insert into a values('yujx','all'),('oracle','pc'),('mysql','mobile');
-#±íaµÄ²âÊÔÊý¾ÝÈçÏÂ
+#è¡¨açš„æµ‹è¯•æ•°æ®å¦‚ä¸‹
 MySQL>select * from a;
 +--------+--------+
 | x      | y      |
@@ -14,7 +14,7 @@ MySQL>select * from a;
 | mysql  | mobile |
 +--------+--------+
 3 rows in set (0.00 sec)
-#Ä¬ÈÏµÄ°´yÅÅÐò£¨ÉýÐò»ò½µÐò£©½á¹û
+#é»˜è®¤çš„æŒ‰yæŽ’åºï¼ˆå‡åºæˆ–é™åºï¼‰ç»“æžœ
 MySQL>select * from a order by y;
 +--------+--------+
 | x      | y      |
@@ -35,8 +35,8 @@ MySQL>select * from a order by y desc;
 +--------+--------+
 3 rows in set (0.00 sec)
  
-ÏÖÔÚÏë°´mobile->all->pcµÄË³ÐòÅÅÐò£¬¿ÉÊ¹ÓÃÈçÏÂ·½·¨
-·½·¨Ò»£ºÊ¹ÓÃ FIND_IN_SET(str,strlist) º¯Êý
+çŽ°åœ¨æƒ³æŒ‰mobile->all->pcçš„é¡ºåºæŽ’åºï¼Œå¯ä½¿ç”¨å¦‚ä¸‹æ–¹æ³•
+æ–¹æ³•ä¸€ï¼šä½¿ç”¨ FIND_IN_SET(str,strlist) å‡½æ•°
 MySQL>select * from a order by find_in_set(y,'mobile,all,pc');
 +--------+--------+
 | x      | y      |
@@ -47,8 +47,8 @@ MySQL>select * from a order by find_in_set(y,'mobile,all,pc');
 +--------+--------+
 3 rows in set (0.00 sec)  
 
-·½·¨¶þ£ºÊ¹ÓÃFIELD(str,str1,str2,str3,...)º¯Êý 
-#FIELDº¯ÊýÖ÷ÒªÓÃÍ¾»á·µ»ØÖµÔÚºóÃæÁÐ±íÖÐµÄÎ»ÖÃ£¬ÈçÏÂ
+æ–¹æ³•äºŒï¼šä½¿ç”¨FIELD(str,str1,str2,str3,...)å‡½æ•° 
+#FIELDå‡½æ•°ä¸»è¦ç”¨é€”ä¼šè¿”å›žå€¼åœ¨åŽé¢åˆ—è¡¨ä¸­çš„ä½ç½®ï¼Œå¦‚ä¸‹
 MySQL>select x,y,field(y,'mobile','pc','all') sort_Nu from a order by field(y,'mobile','pc','all');    
 +--------+--------+---------+
 | x      | y      | sort_Nu |
@@ -59,7 +59,7 @@ MySQL>select x,y,field(y,'mobile','pc','all') sort_Nu from a order by field(y,'m
 +--------+--------+---------+
 3 rows in set (0.00 sec)
 
-·½·¨Èý£ºÊ¹ÓÃ SUBSTRING_INDEX(str,delim,count) º¯Êý
+æ–¹æ³•ä¸‰ï¼šä½¿ç”¨ SUBSTRING_INDEX(str,delim,count) å‡½æ•°
 MySQL>select * from a order by substring_index('mobile,all,pc',y,1);
 +--------+--------+
 | x      | y      |
@@ -69,7 +69,7 @@ MySQL>select * from a order by substring_index('mobile,all,pc',y,1);
 | oracle | pc     |
 +--------+--------+
 3 rows in set (0.00 sec)
-#¿´ÏÂÃæ substring_index('mobile,all,pc',y,1) È¡Öµ,¿ÉÖª°´bÁÐµÄÖµÅÅÐò yµÄË³Ðò¹ÌÈ»¾ÍÊÇ mobile,all,pcÁË 
+#çœ‹ä¸‹é¢ substring_index('mobile,all,pc',y,1) å–å€¼,å¯çŸ¥æŒ‰båˆ—çš„å€¼æŽ’åº yçš„é¡ºåºå›ºç„¶å°±æ˜¯ mobile,all,pcäº† 
 MySQL>select y,substring_index('mobile,all,pc',y,1) b  from a; 
 +--------+-------------+
 | y      | b           |
@@ -80,7 +80,7 @@ MySQL>select y,substring_index('mobile,all,pc',y,1) b  from a;
 +--------+-------------+
 3 rows in set (0.00 sec)
  
-·½·¨ËÄ£ºÊ¹ÓÃcase when
+æ–¹æ³•å››ï¼šä½¿ç”¨case when
 MySQL>select x,y,case when y='mobile' then 1 when y='all' then 2 when y='pc' then 3 end sort_nu from a order by  case when y='mobile' then 1 when y='all' then 2 when y='pc' then 3 end;
 +--------+--------+---------+
 | x      | y      | sort_nu |
