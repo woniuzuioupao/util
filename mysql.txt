@@ -1,0 +1,92 @@
+字段按照指定顺序排序
+
+测试数据
+drop table a;
+create table a (x varchar(10),y varchar(10));
+insert into a values('yujx','all'),('oracle','pc'),('mysql','mobile');
+#表a的测试数据如下
+MySQL>select * from a;
++--------+--------+
+| x      | y      |
++--------+--------+
+| yujx   | all    |
+| oracle | pc     |
+| mysql  | mobile |
++--------+--------+
+3 rows in set (0.00 sec)
+#默认的按y排序（升序或降序）结果
+MySQL>select * from a order by y;
++--------+--------+
+| x      | y      |
++--------+--------+
+| yujx   | all    |
+| mysql  | mobile |
+| oracle | pc     |
++--------+--------+
+3 rows in set (0.00 sec)
+
+MySQL>select * from a order by y desc;
++--------+--------+
+| x      | y      |
++--------+--------+
+| oracle | pc     |
+| mysql  | mobile |
+| yujx   | all    |
++--------+--------+
+3 rows in set (0.00 sec)
+ 
+现在想按mobile->all->pc的顺序排序，可使用如下方法
+方法一：使用 FIND_IN_SET(str,strlist) 函数
+MySQL>select * from a order by find_in_set(y,'mobile,all,pc');
++--------+--------+
+| x      | y      |
++--------+--------+
+| mysql  | mobile |
+| yujx   | all    |
+| oracle | pc     |
++--------+--------+
+3 rows in set (0.00 sec)  
+
+方法二：使用FIELD(str,str1,str2,str3,...)函数 
+#FIELD函数主要用途会返回值在后面列表中的位置，如下
+MySQL>select x,y,field(y,'mobile','pc','all') sort_Nu from a order by field(y,'mobile','pc','all');    
++--------+--------+---------+
+| x      | y      | sort_Nu |
++--------+--------+---------+
+| mysql  | mobile |       1 |
+| oracle | pc     |       2 |
+| yujx   | all    |       3 |
++--------+--------+---------+
+3 rows in set (0.00 sec)
+
+方法三：使用 SUBSTRING_INDEX(str,delim,count) 函数
+MySQL>select * from a order by substring_index('mobile,all,pc',y,1);
++--------+--------+
+| x      | y      |
++--------+--------+
+| mysql  | mobile |
+| yujx   | all    |
+| oracle | pc     |
++--------+--------+
+3 rows in set (0.00 sec)
+#看下面 substring_index('mobile,all,pc',y,1) 取值,可知按b列的值排序 y的顺序固然就是 mobile,all,pc了 
+MySQL>select y,substring_index('mobile,all,pc',y,1) b  from a; 
++--------+-------------+
+| y      | b           |
++--------+-------------+
+| all    | mobile,     |
+| pc     | mobile,all, |
+| mobile |             |
++--------+-------------+
+3 rows in set (0.00 sec)
+ 
+方法四：使用case when
+MySQL>select x,y,case when y='mobile' then 1 when y='all' then 2 when y='pc' then 3 end sort_nu from a order by  case when y='mobile' then 1 when y='all' then 2 when y='pc' then 3 end;
++--------+--------+---------+
+| x      | y      | sort_nu |
++--------+--------+---------+
+| mysql  | mobile |       1 |
+| yujx   | all    |       2 |
+| oracle | pc     |       3 |
++--------+--------+---------+
+3 rows in set (0.00 sec)
